@@ -27,9 +27,11 @@ This machine executes the Rat17F Machine code.
 
 ## Test Case
 
-	testcase_rat17f_machine.ratasm is a sample test case to make sure the machine is working. its execution is equivelent to the c code in testcase_rat17f_machine.c
+	testcase_rat17f_machine.ratasm is a sample test case to make sure the machine is working.
+	its execution is equivelent to the rat17f code in testcase_rat17f_machine.rat17f
 
 	Example:
 	./machine 100 100 100 testcase_rat17f_machine.ratasm
 
-Rat17F was developed by Song-James Choi, Ph.D. of California State University, Fullerton. All this program does is executes his hypothetical language.
+Rat17F was developed by Song-James Choi, Ph.D. of California State University, Fullerton.
+All this program does is executes his hypothetical language.

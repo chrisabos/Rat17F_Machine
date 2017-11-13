@@ -21,6 +21,9 @@ This machine executes the Rat17F Machine code.
 	GRT	Pops two items from the stack and pushes 1 onto TOS if second item is larger otherwise push 0
 	LES	Pops two items from the stack and pushes 1 onto TOS if the second item is smaller than first item otherwise push 0
 	EQU	Pops two items from the stack and pushes 1 onto TOS if they are equal otherwise push 0
+	GEQ	Pops two items from the stack and pushes 1 onto TOS if second item is larger or equal to the first item otherwise push 0
+	LEQ	Pops two items from the stack and pushes 1 onto TOS if second item is less or equal to the first item otherwise push 0
+	NEQ	Pops two items from the stack and pushes 1 onto TOS if they are not equal otherwise push 0
 	JUMPZ	{IL - Instruction Location} Pop the stack and  if the value is 0 then jump to {IL}
 	JUMP	{IL} Unconditionally jump to {IL}
 	LABEL	Empty Instruction; Provides the instruction location to jump to

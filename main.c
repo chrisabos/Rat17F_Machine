@@ -128,6 +128,27 @@ int main(int argc, char* argv[])
 
 			instruction_table[instruction_table_size] = eit;
 		}
+		else if(strstr(line, "GEQ") - line == 0)
+		{
+			memcpy(eit.operator, "GEQ", 4);
+			eit.argument = -1;
+
+			instruction_table[instruction_table_size] = eit;
+		}
+		else if(strstr(line, "LEQ") - line == 0)
+		{
+			memcpy(eit.operator, "LEQ", 4);
+			eit.argument = -1;
+
+			instruction_table[instruction_table_size] = eit;
+		}
+		else if(strstr(line, "NEQ") - line == 0)
+		{
+			memcpy(eit.operator, "NEQ", 4);
+			eit.argument = -1;
+
+			instruction_table[instruction_table_size] = eit;
+		}
 		else if(strstr(line, "JUMPZ") - line == 0)
 		{
 			memcpy(eit.operator, "JUMPZ", 6);
@@ -306,6 +327,63 @@ int main(int argc, char* argv[])
 			int b = stack[stack_size];
 			//compare
 			if(b == a)
+			{
+				//push 1
+				stack[stack_size] = 1;
+			}
+			else
+			{
+				//push 0
+				stack[stack_size] = 0;
+			}
+		}
+		else if(strcmp(instruction_table[program_counter].operator, "GEQ") == 0)
+		{
+			//pop 1st
+			int a = stack[stack_size];
+			stack_size--;
+			//pop 2nd
+			int b = stack[stack_size];
+			//compare
+			if(b >= a)
+			{
+				//push 1
+				stack[stack_size] = 1;
+			}
+			else
+			{
+				//push 0
+				stack[stack_size] = 0;
+			}
+		}
+		else if(strcmp(instruction_table[program_counter].operator, "LEQ") == 0)
+		{
+			//pop 1st
+			int a = stack[stack_size];
+			stack_size--;
+			//pop 2nd
+			int b = stack[stack_size];
+			//compare
+			if(b <= a)
+			{
+				//push 1
+				stack[stack_size] = 1;
+			}
+			else
+			{
+				//push 0
+				stack[stack_size] = 0;
+			}
+		}
+		else if(strcmp(instruction_table[program_counter].operator, "NEQ") == 0)
+		{
+			//pop 1st
+			int a = stack[stack_size];
+			stack_size--;
+			//pop 2nd
+			int b = stack[stack_size];
+			//compare
+			if(b != a)
 			{
 				//push 1
 				stack[stack_size] = 1;

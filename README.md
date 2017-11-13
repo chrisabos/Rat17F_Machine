@@ -20,4 +20,4 @@ This machine executes the Rat17F Machine code.
 	JUMP	{IL} Unconditionally jump to {IL}
 	LABEL	Empty Instruction; Provides the instruction location to jump to
 
-Rat17F was developed by Prof. James Choi of California State University, Fullerton. All this program does is executes his hypothetical language.
+Rat17F was developed by Song-James Choi, Ph.D. of California State University, Fullerton. All this program does is executes his hypothetical language.

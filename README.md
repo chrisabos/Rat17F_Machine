@@ -2,6 +2,11 @@
 
 This machine executes the Rat17F Machine code.
 
+## Execution
+
+	make
+	./machine <instruction table size> <memory size> <stack size> <file>
+
 ## Rat17F Machine Code
 
 	PUSHI	{Integer Value} Pushes the {Integer Value} onto the Top of the Stack (TOS)

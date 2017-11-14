@@ -54,6 +54,7 @@ following block we can see the program counter has incremented, the add has been
 stack and adding them together and putting them back on the stack "(1) 1" and finally the next instruction is STDOUT.
 The standard output is put on its own line down at the bottom.
 
+## Disclaimer
 
 Rat17F was developed by Song-James Choi, Ph.D. of California State University, Fullerton.
 All this program does is executes his hypothetical language.

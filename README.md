@@ -36,5 +36,24 @@ This machine executes the Rat17F Machine code.
 	Example:
 	./machine 100 100 100 testcase_rat17f_machine.ratasm
 
+## Output Explained
+
+	PC: 23 	(2) 0 1
+	  ADD
+	
+	PC: 24 	(1) 1
+	  STDOUT
+	
+	1
+
+The output should look as the above. Each chunk of text represents an instruction about to be executed. The first thing
+we see is "PC: 23." This means our Program Counter is currently on 23. Next we see "(2) 0 1" This is our stack. The
+stack size is in brackets in this case 2. Following is the actual stack. 0 is at the bottom of the stack and 1 is at
+the top of the stack. Next we see "ADD" which means the next instruction to be executed is the add instruction. In the
+following block we can see the program counter has incremented, the add has been completed by popping 1 and 0 from the
+stack and adding them together and putting them back on the stack "(1) 1" and finally the next instruction is STDOUT.
+The standard output is put on its own line down at the bottom.
+
+
 Rat17F was developed by Song-James Choi, Ph.D. of California State University, Fullerton.
 All this program does is executes his hypothetical language.
